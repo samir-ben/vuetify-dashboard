@@ -1,14 +1,33 @@
 const state = {
     team: [
-        { title: 'Design a new website by Sam', person: 'The Net Ninja', due: '1st Jan 2019', status: 'ongoing', content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt consequuntur eos eligendi illum minima adipisci deleniti, dicta mollitia enim explicabo fugiat quidem ducimus praesentium voluptates porro molestias non sequi animi!' },
-        { title: 'Code up the homepage', person: 'Chun Li', due: '10th Jan 2019', status: 'complete', content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt consequuntur eos eligendi illum minima adipisci deleniti, dicta mollitia enim explicabo fugiat quidem ducimus praesentium voluptates porro molestias non sequi animi!' },
-        { title: 'Design video thumbnails', person: 'Ryu', due: '20th Dec 2018', status: 'complete', content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt consequuntur eos eligendi illum minima adipisci deleniti, dicta mollitia enim explicabo fugiat quidem ducimus praesentium voluptates porro molestias non sequi animi!' },
-        { title: 'Create a community forum', person: 'Gouken', due: '20th Oct 2018', status: 'overdue', content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt consequuntur eos eligendi illum minima adipisci deleniti, dicta mollitia enim explicabo fugiat quidem ducimus praesentium voluptates porro molestias non sequi animi!' },
+        { name: 'The Net Ninja', role: 'Web Front developer', avatar: '/avatar-1.png' },
+        { name: 'Ryu', role: 'Graphic designer', avatar: '/avatar-2.png' },
+        { name: 'Chun Li', role: 'Web Front developer', avatar: '/avatar-3.png' },
+        { name: 'Gouken', role: 'Manager', avatar: '/avatar-4.png' },
+        { name: 'Yoshi', role: 'Web Back developer', avatar: '/avatar-5.png' },
+        { name: '4', role: 'Web Back developer', avatar: '/avatar-5.png' },
     ]
 };
 
 const getters = {
-    team: state => state.team
+  team: state => state.team,
+  totalTeam: state => state.team.length,
+  totalManager: state => {
+      let i = state.team.filter(stack => stack.role == 'Manager');
+    return i.length;
+  },
+  totalFrontDeveloper: state => {
+      let i = state.team.filter(stack => stack.role == 'Web Front developer');
+    return i.length;
+  },
+    totalBackDeveloper: state => {
+        let i = state.team.filter(stack => stack.role == 'Web Back developer');
+    return i.length;
+  },
+  totalDesigner: state => {
+      let i = state.team.filter(stack => stack.role == 'Graphic designer');
+        return i.length;
+    }
 };
 
 const actions = {
@@ -18,6 +37,7 @@ const actions = {
 export default {
     namespaced: true,
     state,
-    actions,
     getters,
+    actions,
+   
 };
