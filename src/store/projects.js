@@ -26,16 +26,16 @@ const getters = {
 };
 
 const mutations = {
-  SORT_BY: (state) => {
-    state.projects.sort((a, b) => (a['title'] > b['title'] ? 1 : -1));
-  }
+  // SORT_BY: (state) => {
+  //   state.projects.sort((a, b) => (a['title'] > b['title'] ? 1 : -1));
+  // }
 };
 
 const actions = {
-  sortBy({commit}) {
-    // Add this:
-    commit('SORT_BY');
-  }
+  // sortBy({commit}) {
+  //   // Add this:
+  //   commit('SORT_BY');
+  // }
 };
 
 export default {
