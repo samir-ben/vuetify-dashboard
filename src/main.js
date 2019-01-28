@@ -4,7 +4,10 @@ import App from './App.vue'
 import router from './router'
 import store from './store/store'
 import Donut from 'vue-css-donut-chart';
+import Chart from 'vue2-frappe';
 
+
+Vue.use(Chart);
 Vue.use(Donut);
 Vue.config.productionTip = false
 
