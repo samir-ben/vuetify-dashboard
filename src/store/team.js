@@ -5,7 +5,6 @@ const state = {
         { name: 'Chun Li', role: 'Web Front developer', avatar: '/avatar-3.png' },
         { name: 'Gouken', role: 'Manager', avatar: '/avatar-4.png' },
         { name: 'Yoshi', role: 'Web Back developer', avatar: '/avatar-5.png' },
-        { name: '4', role: 'Web Back developer', avatar: '/avatar-5.png' },
     ]
 };
 
