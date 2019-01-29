@@ -1,39 +1,45 @@
 
 <template>
   <div class="dashboard">
-    <h1 class="subheading grey--text">Dashboard</h1>
-
-    <v-container class="my-5">
-
-      <v-layout row justify-start class="mb-3">
+    <h1 class="container subheading grey--text">Liste des projects</h1>
+    <v-container class="">
+      <v-layout row justify-start class="">
+        <v-btn small flat disabled class="right">Trier par</v-btn>
         <v-tooltip top>
           <v-btn small flat color="grey" @click="sortBy('title')" slot="activator">
             <v-icon small left>folder</v-icon>
-            <span class="caption text-lowercase">By project name</span>
+            <span class="caption text-lowercase">Nom de project</span>
           </v-btn>
-          <span>Sort by project name</span>
+          <span>Trier par nom du project</span>
         </v-tooltip>
         <v-tooltip top>
           <v-btn small flat color="grey" @click="sortBy('person')" slot="activator">
             <v-icon small left>person</v-icon>
-            <span class="caption text-lowercase">By Person</span>
+            <span class="caption text-lowercase">Auteur du projet</span>
           </v-btn>
-          <span>Sort by project author</span>
+          <span>Trier par auteur du projet</span>
+        </v-tooltip>
+         <v-tooltip top>
+          <v-btn small flat color="grey" @click="sortBy('due')" slot="activator">
+            <v-icon small left>calendar_today</v-icon>
+            <span class="caption text-lowercase">Date du project</span>
+          </v-btn>
+          <span>Trier par date</span>
         </v-tooltip>
       </v-layout>
       
       <v-card flat v-for="project in projects" :key="project.title">
         <v-layout row wrap :class="`pa-3 project ${project.status}`">
           <v-flex xs12 md6>
-            <div class="caption grey--text">Project title</div>
+            <div class="caption grey--text">Titre du project</div>
             <div>{{ project.title }}</div>
           </v-flex>
           <v-flex xs6 sm4 md2>
-            <div class="caption grey--text">Person</div>
+            <div class="caption grey--text">Auteur</div>
             <div>{{ project.person }}</div>
           </v-flex>
           <v-flex xs6 sm4 md2>
-            <div class="caption grey--text">Due by</div>
+            <div class="caption grey--text">Date</div>
             <div>{{ project.due }}</div>
           </v-flex>
           <v-flex xs2 sm4 md2>
