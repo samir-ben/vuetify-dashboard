@@ -14,7 +14,8 @@
           </vue-frappe>
         </v-flex>
 
-        <v-flex xs12 sm12 md6 class="mt-5 border-right">
+        <v-layout row wrap class="circle-chart">
+          <v-flex xs12 sm12 md6 class="mt-5 border-right">
           <vc-donut
           background="white" foreground="grey"
           :size="200" unit="px" :thickness="30"
@@ -33,6 +34,7 @@
           <h1>Team</h1>
         </vc-donut>
         </v-flex>
+        </v-layout>
     </v-layout>
   </div>
 </template>
@@ -112,6 +114,9 @@ export default {
 <style scoped>
 .border-right{
   border-right: 1px solid rgb(196, 196, 196);
+}
+.circle-chart{
+  margin-bottom: 70px;
 }
 </style>
 
