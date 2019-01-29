@@ -26,7 +26,7 @@
           <v-avatar size="100">
             <img class="text-lg-center avatar" src="/avatar_default.png">
           </v-avatar>
-          <p class="white--text subheading mt-1 text-md-center">Sam</p>
+          <p class="white--text subheading mt-1 text-md-center">Sam Ben</p>
         </v-flex>
         <v-flex class="mt-4 mb-3">
           <AddProject @projectAdded="snackbar = true" />
@@ -67,7 +67,7 @@ export default {
 
 <style>
 nav {
-  background-color : #03314C !important;
+  background-color : #33494A !important;
 }
 .nav-link a{
   text-decoration: none;
