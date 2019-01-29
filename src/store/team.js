@@ -1,10 +1,10 @@
 const state = {
     team: [
-        { name: 'The Net Ninja', role: 'Web Front developer', avatar: '/avatar-1.png' },
-        { name: 'Ryu', role: 'Graphic designer', avatar: '/avatar-2.png' },
-        { name: 'Chun Li', role: 'Web Front developer', avatar: '/avatar-3.png' },
-        { name: 'Gouken', role: 'Manager', avatar: '/avatar-4.png' },
-        { name: 'Yoshi', role: 'Web Back developer', avatar: '/avatar-5.png' },
+        { name: 'Kevin Marli', role: 'Web Front developer', avatar: 'avatar_default.png' },
+        { name: 'Mathias Molla', role: 'Graphic designer', avatar: '/avatar_default.png' },
+        { name: 'Kim Name', role: 'Web Front developer', avatar: '/avatar_default.png' },
+        { name: 'Sam ben', role: 'Manager', avatar: '/avatar_default.png' },
+        { name: 'Moundir Amar', role: 'Web Back developer', avatar: '/avatar_default.png' },
     ]
 };
 
